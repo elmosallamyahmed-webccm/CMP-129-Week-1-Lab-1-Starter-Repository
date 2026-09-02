@@ -11,9 +11,11 @@ public class InterestEarned {
         double timesCompounded = hello.nextDouble();
         double currentAmount = principal + Math.pow((1+(interestRate/timesCompounded)), timesCompounded);
         double interest = currentAmount - principal;
-        System.out.println("Intereset Rate:                     ");
-        System.out.println(interest);
+        System.out.printf("%-30s %.2f%%%n", "Interest Rate:", ratePercent );
+        System.out.printf("%-30s %d%n", "Times Compounded:", (int) timesCompounded);
+        System.out.printf("%-30s $%.2f%n", "Principal:", principal);
+        System.out.printf("%-30s $%.2f%n", "Interest:", interest);
+        System.out.printf("%-30s $%.2f%n", "Amount in Savings:", currentAmount);
         hello.close();
     }
-    
 }
