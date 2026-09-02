@@ -9,7 +9,7 @@ public class InterestEarned {
         double interestRate = ratePercent/100;
         System.out.println("What is the number of times the interest is compounded?");
         double timesCompounded = hello.nextDouble();
-        double currentAmount = principal + Math.pow((1+(interestRate/timesCompounded)), timesCompounded);
+        double currentAmount = principal * Math.pow((1+(interestRate/timesCompounded)), timesCompounded);
         double interest = currentAmount - principal;
         System.out.printf("%-30s %.2f%%%n", "Interest Rate:", ratePercent );
         System.out.printf("%-30s %d%n", "Times Compounded:", (int) timesCompounded);
