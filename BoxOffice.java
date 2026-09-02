@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class BoxOffice {
+public class BoxOffice{
     public static void main(String[] args){
         Scanner write = new Scanner(System.in);
         System.out.println("What is the name of the movie?");
@@ -11,12 +11,13 @@ public class BoxOffice {
         double gross = (AT * 10.00) + (CT * 6.00);
         double net = (gross * 0.20);
         double distributorProfit = gross - net;
-        System.out.printf("Movie Name:%20s%n", "\""+ movie + "\"");
-        System.out.printf("Adult Tickets Sold:%20.2f%n",AT);
-        System.out.printf("Child Tickets Sold:%20.2f%n",CT);
-        System.out.printf("Gross Box Office Profit:$%19.2f%n",gross);
-        System.out.printf("Net Box Office Profit:$%19.2f%n",net);
-        System.out.printf("Amount Paid to Distributor:$%19.2f%n",distributorProfit);
-        write.close();
+        System.out.printf("%-30s %s%n", "Movie Name:", "\"" + movie + "\"");
+        System.out.printf("%-30s %d%n", "Adult Tickets Sold:", (int) AT);
+        System.out.printf("%-30s %d%n", "Child Tickets Sold:", (int) CT);
+        System.out.printf("%-30s $%.2f%n", "Gross Box Office Profit:", gross);
+        System.out.printf("%-30s $%.2f%n", "Net Box Office Profit:", net);
+        System.out.printf("%-30s $%.2f%n", "Amount Paid to Distributor:", distributorProfit);
+        write.close(); 
     }
 }   
+
